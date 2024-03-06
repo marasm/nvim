@@ -14,6 +14,11 @@ vim.keymap.set('n', '<c-Right>', ':wincmd l<CR>')
 vim.keymap.set('n', '<c-q>',     ':q<CR>')
 vim.keymap.set('n', '<c-s>',     ':w<CR>')
 
+--better copy/paste
+vim.keymap.set('v', '<c-c>',     '"+yi')
+vim.keymap.set('v', '<c-v>',     'c<ESC>"+p')
+vim.keymap.set('i', '<c-v>',     '<ESC>"+pa')
+
 --show line numbers
 vim.wo.number = true
 
