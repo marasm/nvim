@@ -3,7 +3,7 @@ return {
 	config = function()
 		require("lualine").setup({
 			options = {
-				theme = "monokai-pro",
+				theme = "auto", --will match whatever is set for nvim colorscheme
         icons_enabled = true,
         component_separators = { left = '|', right = '|'},
         section_separators = { left = ' ', right = ' '},

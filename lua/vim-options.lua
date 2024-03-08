@@ -3,6 +3,9 @@ vim.cmd("set tabstop=2")
 vim.cmd("set softtabstop=2")
 vim.cmd("set shiftwidth=2")
 
+--set right margin/gutter at 120 chars
+vim.cmd("set colorcolumn=120") 
+
 --set leader key to be space
 vim.g.mapleader=" "
 
@@ -13,7 +16,8 @@ vim.keymap.set('n', '<c-Left>',  ':wincmd h<CR>')
 vim.keymap.set('n', '<c-Right>', ':wincmd l<CR>')
 
 --save and quit
-vim.keymap.set('n', '<c-q>',     ':q<CR>')
+vim.keymap.set('n', '<c-w>',     ':bw<CR>')
+vim.keymap.set('n', '<c-q>',     ':qa<CR>')
 vim.keymap.set('n', '<c-s>',     ':w<CR>')
 
 --buffer navigation
