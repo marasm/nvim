@@ -26,10 +26,8 @@ return {
           --               -- the current file is changed while the tree is open.
           leave_dirs_open = false, -- `false` closes auto expanded dirs, such as with `:Neotree reveal`
         },
-        use_libuv_file_watcher = true,
+        hijack_netrw_behavior = "open_default" 
       }
     })
-    --this needs to be last as all of the above need to be set before showing the tree
-    --vim.cmd("Neotree filesystem reveal left<CR>")
 	end,
 }
