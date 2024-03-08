@@ -16,7 +16,7 @@ vim.keymap.set('n', '<c-Left>',  ':wincmd h<CR>')
 vim.keymap.set('n', '<c-Right>', ':wincmd l<CR>')
 
 --save and quit
-vim.keymap.set('n', '<c-w>',     ':bw<CR>')
+vim.keymap.set('n', '<c-w>',     ':bp|bd #<CR>')
 vim.keymap.set('n', '<c-q>',     ':qa<CR>')
 vim.keymap.set('n', '<c-s>',     ':w<CR>')
 
