@@ -9,9 +9,11 @@ return {
   {
     "williamboman/mason-lspconfig.nvim",
     lazy = false,
-    opts = {
-      auto_install = true,
-    },
+    config = function()
+      require("mason-lspconfig").setup({
+        automatic_installation = true
+      })
+    end
   },
   {
     "neovim/nvim-lspconfig",
