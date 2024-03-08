@@ -11,6 +11,7 @@ return {
 		vim.keymap.set("n", "<leader>ob", ":Neotree buffers reveal float<CR>", {})
 
     require("neo-tree").setup({
+      close_if_last_window = false,
       sort_case_insensitive = true,
       enable_git_status = false,
       enable_diagnostics = false,
