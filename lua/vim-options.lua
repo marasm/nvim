@@ -15,6 +15,11 @@ vim.keymap.set('n', '<c-Down>',  ':wincmd j<CR>')
 vim.keymap.set('n', '<c-Left>',  ':wincmd h<CR>')
 vim.keymap.set('n', '<c-Right>', ':wincmd l<CR>')
 
+vim.keymap.set('n', '<c-k>',    ':wincmd k<CR>')
+vim.keymap.set('n', '<c-j>',  ':wincmd j<CR>')
+vim.keymap.set('n', '<c-h>',  ':wincmd h<CR>')
+vim.keymap.set('n', '<c-l>', ':wincmd l<CR>')
+
 --save and quit
 vim.keymap.set('n', '<c-w>',     ':bp|bd #<CR>')
 vim.keymap.set('n', '<c-q>',     ':qa<CR>')
