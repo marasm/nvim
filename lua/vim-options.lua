@@ -9,6 +9,9 @@ vim.cmd("set colorcolumn=120")
 --set leader key to be space
 vim.g.mapleader=" "
 
+-- enable the active cursor line
+vim.opt.cursorline = true
+
 --better navigation between panes
 vim.keymap.set('n', '<c-Up>',    ':wincmd k<CR>')
 vim.keymap.set('n', '<c-Down>',  ':wincmd j<CR>')
