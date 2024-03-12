@@ -4,13 +4,19 @@ vim.cmd("set softtabstop=2")
 vim.cmd("set shiftwidth=2")
 
 --set right margin/gutter at 120 chars
-vim.cmd("set colorcolumn=120")
+vim.opt.colorcolumn = "120"
 
 --set leader key to be space
 vim.g.mapleader=" "
 
 -- enable the active cursor line
 vim.opt.cursorline = true
+
+-- min number of lines to show at top/bottom when scrolling
+vim.opt.scrolloff = 8
+
+--enable incremantal search highlighting
+vim.opt.incsearch = true
 
 --better navigation between panes
 vim.keymap.set('n', '<c-Up>',    ':wincmd k<CR>')
