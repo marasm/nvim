@@ -52,6 +52,8 @@ vim.keymap.set('n', "<A-Down>", ':move+1<CR>')
 vim.keymap.set('n', '<A-Up>',   ':move-2<CR>')
 vim.keymap.set('i', "<A-Down>", '<Esc>:move+1<CR>')
 vim.keymap.set('i', '<A-Up>',   '<Esc>:move-2<CR>')
+vim.keymap.set('v', '<A-Down>', ":move '>+1<CR>gv=gv")
+vim.keymap.set('v', '<A-Up>',   ":move '<-2<CR>gv=gv")
 
 
 --show line numbers
