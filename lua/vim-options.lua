@@ -55,6 +55,10 @@ vim.keymap.set('i', '<A-Up>',   '<Esc>:move-2<CR>')
 vim.keymap.set('v', '<A-Down>', ":move '>+1<CR>gv=gv")
 vim.keymap.set('v', '<A-Up>',   ":move '<-2<CR>gv=gv")
 
+-- don't lose selection when indenting
+vim.keymap.set('v', '<', '<gv')
+vim.keymap.set('v', '>', '>gv')
+vim.keymap.set('v', '=', '=gv')
 
 --show line numbers
 vim.wo.number = true
