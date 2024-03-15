@@ -29,10 +29,11 @@ vim.keymap.set('n', '<c-j>', ':wincmd j<CR>')
 vim.keymap.set('n', '<c-h>', ':wincmd h<CR>')
 vim.keymap.set('n', '<c-l>', ':wincmd l<CR>')
 
---save and quit
+-- buffer management
 vim.keymap.set('n', '<c-w>',     ':bp|bd #<CR>')
 vim.keymap.set('n', '<c-q>',     ':qa<CR>')
 vim.keymap.set('n', '<c-s>',     ':w<CR>')
+vim.keymap.set('n', '<c-n>',     ':enew<CR>')
 
 --buffer navigation
 vim.keymap.set('n', '<c-PageUp>',   ':bNext<CR>')
@@ -54,6 +55,11 @@ vim.keymap.set('i', "<A-Down>", '<Esc>:move+1<CR>')
 vim.keymap.set('i', '<A-Up>',   '<Esc>:move-2<CR>')
 vim.keymap.set('v', '<A-Down>', ":move '>+1<CR>gv=gv")
 vim.keymap.set('v', '<A-Up>',   ":move '<-2<CR>gv=gv")
+
+-- don't lose selection when indenting
+vim.keymap.set('v', '<', '<gv')
+vim.keymap.set('v', '>', '>gv')
+vim.keymap.set('v', '=', '=gv')
 
 --show line numbers
 vim.wo.number = true
