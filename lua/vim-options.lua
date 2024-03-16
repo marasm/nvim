@@ -74,7 +74,5 @@ vim.keymap.set('v', '<', '<gv')
 vim.keymap.set('v', '>', '>gv')
 vim.keymap.set('v', '=', '=gv')
 
--- code navigation and editing
-vim.keymap.set('n', '<leader>fa', vim.lsp.buf.format, {})
 
 
