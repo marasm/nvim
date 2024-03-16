@@ -3,6 +3,9 @@ vim.cmd("set tabstop=2")
 vim.cmd("set softtabstop=2")
 vim.cmd("set shiftwidth=2")
 
+--show line numbers
+vim.wo.number = true
+
 --set right margin/gutter at 120 chars
 vim.opt.colorcolumn = "120"
 
@@ -28,6 +31,17 @@ vim.keymap.set('n', '<c-k>', ':wincmd k<CR>')
 vim.keymap.set('n', '<c-j>', ':wincmd j<CR>')
 vim.keymap.set('n', '<c-h>', ':wincmd h<CR>')
 vim.keymap.set('n', '<c-l>', ':wincmd l<CR>')
+
+-- these are specific to terminal mode pane navigation
+vim.keymap.set('t', '<c-Up>',    [[<Cmd>wincmd k<CR>]])
+vim.keymap.set('t', '<c-Down>',  [[<Cmd>wincmd j<CR>]])
+vim.keymap.set('t', '<c-Left>',  [[<Cmd>wincmd h<CR>]])
+vim.keymap.set('t', '<c-Right>', [[<Cmd>wincmd l<CR>]])
+
+vim.keymap.set('t', '<c-k>', [[<Cmd>wincmd k<CR>]])
+vim.keymap.set('t', '<c-j>', [[<Cmd>wincmd j<CR>]])
+vim.keymap.set('t', '<c-h>', [[<Cmd>wincmd h<CR>]])
+vim.keymap.set('t', '<c-l>', [[<Cmd>wincmd l<CR>]])
 
 --save and quit
 vim.keymap.set('n', '<c-w>',     ':bp|bd #<CR>')
@@ -60,6 +74,7 @@ vim.keymap.set('v', '<', '<gv')
 vim.keymap.set('v', '>', '>gv')
 vim.keymap.set('v', '=', '=gv')
 
---show line numbers
-vim.wo.number = true
+-- code navigation and editing
+vim.keymap.set('n', '<leader>fa', vim.lsp.buf.format, {})
+
 
