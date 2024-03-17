@@ -50,11 +50,9 @@ vim.keymap.set('n', '<c-s>',     ':w<CR>')
 
 --buffer navigation
 vim.keymap.set('n', '<c-PageUp>',   ':bNext<CR>')
-vim.keymap.set('n', '<c-,>',        ':bNext<CR>')
-vim.keymap.set('n', '<ctrl-,>',     ':bNext<CR>') --this is ipad specific
+vim.keymap.set('n', '<c-[>',        ':bNext<CR>')
 vim.keymap.set('n', '<c-PageDown>', ':bnext<CR>')
-vim.keymap.set('n', '<c-.>',        ':bnext<CR>')
-vim.keymap.set('n', '<ctrl-.>',     ':bnext<CR>') --this is ipad specific
+vim.keymap.set('n', '<c-]>',        ':bnext<CR>')
 
 --better copy/paste 
 vim.keymap.set('v', '<c-c>',     '"+yi')
