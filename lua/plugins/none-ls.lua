@@ -8,6 +8,7 @@ return {
         null_ls.builtins.formatting.prettier,
       },
     })
-    vim.keymap.set("n", "<leader>fa", vim.lsp.buf.format, {})
+    vim.keymap.set("n", "<leader>fa", vim.lsp.buf.format, {desc='Format All'})
+    vim.keymap.set("v", "<leader>fs", vim.lsp.buf.format, {desc='Format Selection'})
   end,
 }
