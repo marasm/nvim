@@ -22,6 +22,10 @@ vim.opt.scrolloff = 8
 --enable incremantal search highlighting
 vim.opt.incsearch = true
 
+--word wrap options
+vim.keymap.set('n', '<leader>ww', ':set wrap<CR>', {desc='Word wrap on'})
+vim.keymap.set('n', '<leader>nw', ':set nowrap<CR>', {desc='Word wrap off'})
+
 --better navigation between panes
 vim.keymap.set('n', '<c-Up>',    ':wincmd k<CR>', {desc='Move to pane above'})
 vim.keymap.set('n', '<c-Down>',  ':wincmd j<CR>', {desc='Move to pane below'})
