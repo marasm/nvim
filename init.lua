@@ -13,6 +13,8 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+-- this will highlight the selection that is being yanked
+vim.cmd[[au TextYankPost * silent! lua vim.highlight.on_yank()]]
 
 require("vim-options")
 require("lazy").setup("plugins")
