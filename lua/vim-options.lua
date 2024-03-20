@@ -77,5 +77,11 @@ vim.keymap.set('v', '<', '<gv')
 vim.keymap.set('v', '>', '>gv')
 vim.keymap.set('v', '=', '=gv')
 
-
+-- override default behavior of putting deleted stuff in register
+vim.keymap.set({'v','x','n'}, 'd', '"_d')
+vim.keymap.set({'v','x','n'}, 'D', '"_D')
+vim.keymap.set({'v','x','n'}, 'c', '"_c')
+vim.keymap.set({'v','x','n'}, 'C', '"_C')
+vim.keymap.set({'v','x','n'}, 'x', '"_x')
+vim.keymap.set({'v','x','n'}, 'X', '"_X')
 
