@@ -60,7 +60,7 @@ vim.keymap.set('n', '<c-PageDown>', ':bnext<CR>', {desc='Next buffer'})
 vim.keymap.set('n', ']b',           ':bnext<CR>', {desc='Next buffer'})
 
 --better copy/paste 
-vim.keymap.set('v', '<c-c>',     '"+yi',      {desc='Copy to clipboard'})
+vim.keymap.set('v', '<c-c>',     '"+y',       {desc='Copy to clipboard'})
 vim.keymap.set('v', '<c-v>',     'c<ESC>"+p', {desc='Paste from clipboard'})
 vim.keymap.set('i', '<c-v>',     '<ESC>"+pa', {desc='Paste from clipboard'})
 
