@@ -9,10 +9,10 @@ return {
       --partial_char = "~",
     })
 
-		vim.keymap.set("n", "<leader>tt", ":ToggleCheckbox<CR>", {desc='Toggle checkbox state'})
-		vim.keymap.set("n", "<leader>tc", ":ToggleCheckboxCheck<CR>", {desc='Mark checkbox as checked'})
-		vim.keymap.set("n", "<leader>tu", ":ToggleCheckboxUnCheck<CR>", {desc='Mark checkbox as unchecked'})
-		vim.keymap.set("n", "<leader>tp", ":ToggleCheckboxPartial<CR>", {desc='Mark checkbox as partial'})
-		vim.keymap.set("n", "<leader>tf", ":ToggleCheckboxFailed<CR>", {desc='Mark checkbox as failed'})
+		vim.keymap.set("n", "<leader>tt", ":ToggleCheckbox<CR>", {desc='Toggle checkbox state', silent=true})
+		vim.keymap.set("n", "<leader>tc", ":ToggleCheckboxCheck<CR>", {desc='Mark checkbox as checked', silent=true})
+		vim.keymap.set("n", "<leader>tu", ":ToggleCheckboxUnCheck<CR>", {desc='Mark checkbox as unchecked', silent=true})
+		vim.keymap.set("n", "<leader>tp", ":ToggleCheckboxPartial<CR>", {desc='Mark checkbox as partial', silent=true})
+		vim.keymap.set("n", "<leader>tf", ":ToggleCheckboxFailed<CR>", {desc='Mark checkbox as failed', silent=true})
   end
 }
