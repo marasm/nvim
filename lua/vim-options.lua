@@ -23,41 +23,44 @@ vim.opt.scrolloff = 8
 vim.opt.incsearch = true
 
 --word wrap options
-vim.keymap.set('n', '<leader>ww', ':set wrap<CR>', {desc='Word wrap on'})
-vim.keymap.set('n', '<leader>nw', ':set nowrap<CR>', {desc='Word wrap off'})
+vim.keymap.set('n', '<leader>ww', ':set wrap<CR>', {desc='Word wrap on', silent=true})
+vim.keymap.set('n', '<leader>nw', ':set nowrap<CR>', {desc='Word wrap off', silent=true})
+
+--hide the search highlighting
+vim.keymap.set('n', '<leader>hh', ':nohlsearch<CR>', {desc='Hide search highlights', silent=true})
 
 --better navigation between panes
-vim.keymap.set('n', '<c-Up>',    ':wincmd k<CR>', {desc='Move to pane above'})
-vim.keymap.set('n', '<c-Down>',  ':wincmd j<CR>', {desc='Move to pane below'})
-vim.keymap.set('n', '<c-Left>',  ':wincmd h<CR>', {desc='Move to pane to the left'})
-vim.keymap.set('n', '<c-Right>', ':wincmd l<CR>', {desc='Move to pane to the right'})
+vim.keymap.set('n', '<c-Up>',    ':wincmd k<CR>', {desc='Move to pane above', silent=true})
+vim.keymap.set('n', '<c-Down>',  ':wincmd j<CR>', {desc='Move to pane below', silent=true})
+vim.keymap.set('n', '<c-Left>',  ':wincmd h<CR>', {desc='Move to pane to the left', silent=true})
+vim.keymap.set('n', '<c-Right>', ':wincmd l<CR>', {desc='Move to pane to the right', silent=true})
 
-vim.keymap.set('n', '<c-k>', ':wincmd k<CR>', {desc='Move to pane above'})
-vim.keymap.set('n', '<c-j>', ':wincmd j<CR>', {desc='Move to pane below'})
-vim.keymap.set('n', '<c-h>', ':wincmd h<CR>', {desc='Move to pane to the left'})
-vim.keymap.set('n', '<c-l>', ':wincmd l<CR>', {desc='Move to pane to the right'})
+vim.keymap.set('n', '<c-k>', ':wincmd k<CR>', {desc='Move to pane above', silent=true})
+vim.keymap.set('n', '<c-j>', ':wincmd j<CR>', {desc='Move to pane below', silent=true})
+vim.keymap.set('n', '<c-h>', ':wincmd h<CR>', {desc='Move to pane to the left', silent=true})
+vim.keymap.set('n', '<c-l>', ':wincmd l<CR>', {desc='Move to pane to the right', silent=true})
 
 -- these are specific to terminal mode pane navigation
-vim.keymap.set('t', '<c-Up>',    [[<Cmd>wincmd k<CR>]], {desc='Term move to pane above'})
-vim.keymap.set('t', '<c-Down>',  [[<Cmd>wincmd j<CR>]], {desc='Term move to pane below'})
-vim.keymap.set('t', '<c-Left>',  [[<Cmd>wincmd h<CR>]], {desc='Term move to pane to the left'})
-vim.keymap.set('t', '<c-Right>', [[<Cmd>wincmd l<CR>]], {desc='Term move to pane to the right'})
+vim.keymap.set('t', '<c-Up>',    [[<Cmd>wincmd k<CR>]], {desc='Term move to pane above', silent=true})
+vim.keymap.set('t', '<c-Down>',  [[<Cmd>wincmd j<CR>]], {desc='Term move to pane below', silent=true})
+vim.keymap.set('t', '<c-Left>',  [[<Cmd>wincmd h<CR>]], {desc='Term move to pane to the left', silent=true})
+vim.keymap.set('t', '<c-Right>', [[<Cmd>wincmd l<CR>]], {desc='Term move to pane to the right', silent=true})
 
-vim.keymap.set('t', '<c-k>', [[<Cmd>wincmd k<CR>]], {desc='Term move to pane above'})
-vim.keymap.set('t', '<c-j>', [[<Cmd>wincmd j<CR>]], {desc='Term move to pane below'})
-vim.keymap.set('t', '<c-h>', [[<Cmd>wincmd h<CR>]], {desc='Term move to pane to the left'})
-vim.keymap.set('t', '<c-l>', [[<Cmd>wincmd l<CR>]], {desc='Term move to pane to the right'})
+vim.keymap.set('t', '<c-k>', [[<Cmd>wincmd k<CR>]], {desc='Term move to pane above', silent=true})
+vim.keymap.set('t', '<c-j>', [[<Cmd>wincmd j<CR>]], {desc='Term move to pane below', silent=true})
+vim.keymap.set('t', '<c-h>', [[<Cmd>wincmd h<CR>]], {desc='Term move to pane to the left', silent=true})
+vim.keymap.set('t', '<c-l>', [[<Cmd>wincmd l<CR>]], {desc='Term move to pane to the right', silent=true})
 
 --save and quit
-vim.keymap.set('n', '<c-w>',     ':bp|bd #<CR>', {desc='Close the buffer'})
-vim.keymap.set('n', '<c-q>',     ':qa<CR>',      {desc='Quit NeoVim'})
-vim.keymap.set('n', '<c-s>',     ':w<CR>',       {desc='Save the buffer'})
+vim.keymap.set('n', '<c-w>',     ':bp|bd #<CR>', {desc='Close the buffer', silent=true})
+vim.keymap.set('n', '<c-q>',     ':qa<CR>',      {desc='Quit NeoVim', silent=true})
+vim.keymap.set('n', '<c-s>',     ':w<CR>',       {desc='Save the buffer', silent=true})
 
 --buffer navigation
-vim.keymap.set('n', '<c-PageUp>',   ':bNext<CR>', {desc='Previous buffer'})
-vim.keymap.set('n', '[b',           ':bNext<CR>', {desc='Previous buffer'}) 
-vim.keymap.set('n', '<c-PageDown>', ':bnext<CR>', {desc='Next buffer'})
-vim.keymap.set('n', ']b',           ':bnext<CR>', {desc='Next buffer'})
+vim.keymap.set('n', '<c-PageUp>',   ':bNext<CR>', {desc='Previous buffer', silent=true})
+vim.keymap.set('n', '[b',           ':bNext<CR>', {desc='Previous buffer', silent=true}) 
+vim.keymap.set('n', '<c-PageDown>', ':bnext<CR>', {desc='Next buffer', silent=true})
+vim.keymap.set('n', ']b',           ':bnext<CR>', {desc='Next buffer', silent=true})
 
 --better copy/paste 
 vim.keymap.set('v', '<c-c>',     '"+y',       {desc='Copy to clipboard'})
@@ -65,12 +68,12 @@ vim.keymap.set('v', '<c-v>',     'c<ESC>"+p', {desc='Paste from clipboard'})
 vim.keymap.set('i', '<c-v>',     '<ESC>"+pa', {desc='Paste from clipboard'})
 
 --move lines up/down
-vim.keymap.set('n', "<A-Down>", ':move+1<CR>',         {desc='Move line down'})
-vim.keymap.set('n', '<A-Up>',   ':move-2<CR>',         {desc='Move line up'})
-vim.keymap.set('i', "<A-Down>", '<Esc>:move+1<CR>',    {desc='Move line down'})
-vim.keymap.set('i', '<A-Up>',   '<Esc>:move-2<CR>',    {desc='Move line up'})
-vim.keymap.set('v', '<A-Down>', ":move '>+1<CR>gv=gv", {desc='Move selection down'})
-vim.keymap.set('v', '<A-Up>',   ":move '<-2<CR>gv=gv", {desc='Move selection up'})
+vim.keymap.set('n', "<A-Down>", ':move+1<CR>',         {desc='Move line down', silent=true})
+vim.keymap.set('n', '<A-Up>',   ':move-2<CR>',         {desc='Move line up', silent=true})
+vim.keymap.set('i', "<A-Down>", '<Esc>:move+1<CR>',    {desc='Move line down', silent=true})
+vim.keymap.set('i', '<A-Up>',   '<Esc>:move-2<CR>',    {desc='Move line up', silent=true})
+vim.keymap.set('v', '<A-Down>', ":move '>+1<CR>gv=gv", {desc='Move selection down', silent=true})
+vim.keymap.set('v', '<A-Up>',   ":move '<-2<CR>gv=gv", {desc='Move selection up', silent=true})
 
 -- don't lose selection when indenting
 vim.keymap.set('v', '<', '<gv')

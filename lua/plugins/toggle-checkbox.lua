@@ -3,10 +3,10 @@ return {
   config = function()
     require("toggle-checkbox").setup({
       --can override characters for states
-      --checked = "√",
-      --unchecked = " ",
-      --failed = "x",
-      --partial = "~",
+      --checked_char = "√",
+      --unchecked_char = " ",
+      --failed_char = "x",
+      --partial_char = "~",
     })
 
 		vim.keymap.set("n", "<leader>tt", ":ToggleCheckbox<CR>", {desc='Toggle checkbox state'})
