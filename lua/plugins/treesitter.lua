@@ -10,6 +10,7 @@ return {
 				indent = { enable = true },
 				ensure_installed = {
 					"javascript",
+					"vim",
 					"lua",
 					"yaml",
 					"java",
