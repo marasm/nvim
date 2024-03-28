@@ -54,6 +54,12 @@ vim.keymap.set('t', '<c-j>', [[<Cmd>wincmd j<CR>]], {desc='Term move to pane bel
 vim.keymap.set('t', '<c-h>', [[<Cmd>wincmd h<CR>]], {desc='Term move to pane to the left', silent=true})
 vim.keymap.set('t', '<c-l>', [[<Cmd>wincmd l<CR>]], {desc='Term move to pane to the right', silent=true})
 
+-- resizing horizontal and vertical splits
+vim.keymap.set('n', '<A-k>', ':resize +1<CR>', {desc='Make horizontal window bigger', silent=true})
+vim.keymap.set('n', '<A-j>', ':resize -1<CR>', {desc='Make horizontal window smaller', silent=true})
+vim.keymap.set('n', '<A-h>', ':vertical resize -1<CR>', {desc='Make vertical window smaller', silent=true})
+vim.keymap.set('n', '<A-l>', ':vertical resize +1<CR>', {desc='Make vertical window bigger', silent=true})
+
 --save and quit
 vim.keymap.set('n', '<c-w>',     ':bp|bd #<CR>', {desc='Close the buffer', silent=true})
 vim.keymap.set('n', '<c-q>',     ':qa<CR>',      {desc='Quit NeoVim', silent=true})

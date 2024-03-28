@@ -65,11 +65,15 @@ return {
         }
       },
       routes = {
-      {
-        view = "mini",
-        filter = { event = "msg_showmode" },
+        {
+          view = "mini",
+          filter = { event = "msg_showmode" },
+        },
       },
-    },
+      lsp = {
+        hover = { enabled = false },
+        signature = { enabled = false },
+      },
     })
   end,
 }
