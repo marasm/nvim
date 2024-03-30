@@ -72,9 +72,11 @@ vim.keymap.set('n', '<c-PageDown>', ':bnext<CR>', {desc='Next buffer', silent=tr
 vim.keymap.set('n', ']b',           ':bnext<CR>', {desc='Next buffer', silent=true})
 
 --better copy/paste 
-vim.keymap.set('v', '<c-c>',     '"+y',       {desc='Copy to clipboard'})
-vim.keymap.set('v', '<c-v>',     'c<ESC>"+p', {desc='Paste from clipboard'})
-vim.keymap.set('i', '<c-v>',     '<ESC>"+pa', {desc='Paste from clipboard'})
+vim.keymap.set('v',       '<c-c>',     '"+y',       {desc='Copy to clipboard'})
+vim.keymap.set('v',       '<c-x>',     '"+x',       {desc='Cut to clipboard'})
+vim.keymap.set('v',       '<c-v>',     'c<ESC>"+p', {desc='Paste from clipboard'})
+vim.keymap.set('i',       '<c-v>',     '<ESC>"+pa', {desc='Paste from clipboard'})
+vim.keymap.set({'v','n'}, '<c-a>',     '<ESC>ggVG', {desc='Select all'})
 
 --move lines up/down
 vim.keymap.set('n', "<A-Down>", ':move+1<CR>',         {desc='Move line down', silent=true})
