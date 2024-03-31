@@ -32,6 +32,10 @@ vim.keymap.set('n', '<leader>nw', ':set nowrap<CR>', {desc='Word wrap off', sile
 --hide the search highlighting
 vim.keymap.set('n', '<leader>hh', ':nohlsearch<CR>', {desc='Hide search highlights', silent=true})
 
+-- spell checking
+vim.keymap.set('n', '<leader>sc', ':set spell<CR>', {desc='Turn spell check on', silent=true})
+vim.keymap.set('n', '<leader>ns', ':set nospell<CR>', {desc='Turn spell check off', silent=true})
+
 --better navigation between panes
 vim.keymap.set('n', '<c-Up>',    ':wincmd k<CR>', {desc='Move to pane above', silent=true})
 vim.keymap.set('n', '<c-Down>',  ':wincmd j<CR>', {desc='Move to pane below', silent=true})
@@ -70,6 +74,7 @@ vim.keymap.set('n', '<c-PageUp>',   ':bNext<CR>', {desc='Previous buffer', silen
 vim.keymap.set('n', '[b',           ':bNext<CR>', {desc='Previous buffer', silent=true}) 
 vim.keymap.set('n', '<c-PageDown>', ':bnext<CR>', {desc='Next buffer', silent=true})
 vim.keymap.set('n', ']b',           ':bnext<CR>', {desc='Next buffer', silent=true})
+vim.keymap.set('n', '<leader>nb',   ':enew<CR>',  {desc='New buffer', silent=true})
 
 --better copy/paste 
 vim.keymap.set('v',       '<c-c>',     '"+y',       {desc='Copy to clipboard'})
