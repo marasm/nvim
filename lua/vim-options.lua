@@ -4,6 +4,10 @@ vim.cmd("set softtabstop=2")
 vim.cmd("set shiftwidth=2")
 vim.cmd("set linebreak")
 
+--set spelling lang
+vim.opt.spelllang='en_us'
+vim.cmd[[autocmd FileType markdown,md,text setlocal spell]]
+
 --show line numbers
 vim.wo.number = true
 
@@ -33,8 +37,8 @@ vim.keymap.set('n', '<leader>nw', ':set nowrap<CR>', {desc='Word wrap off', sile
 vim.keymap.set('n', '<leader>hh', ':nohlsearch<CR>', {desc='Hide search highlights', silent=true})
 
 -- spell checking
-vim.keymap.set('n', '<leader>sc', ':set spell<CR>', {desc='Turn spell check on', silent=true})
-vim.keymap.set('n', '<leader>ns', ':set nospell<CR>', {desc='Turn spell check off', silent=true})
+vim.keymap.set('n', '<leader>sc', ':setlocal spell<CR>',   {desc='Turn spell check on', silent=true})
+vim.keymap.set('n', '<leader>ns', ':setlocal nospell<CR>', {desc='Turn spell check off', silent=true})
 
 --better navigation between panes
 vim.keymap.set('n', '<c-Up>',    ':wincmd k<CR>', {desc='Move to pane above', silent=true})
