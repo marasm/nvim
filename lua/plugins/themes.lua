@@ -1,6 +1,6 @@
 return {
   {
-    "loctvl842/monokai-pro.nvim",
+    "marasm/monokai-pro.nvim",
     config = function()
       require("monokai-pro").setup({
         filter="machine",  --other values: pro(default), classic, octagon, ristretto, spectrum
