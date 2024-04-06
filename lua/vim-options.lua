@@ -75,7 +75,7 @@ vim.keymap.set('n', '<c-s>',     ':w<CR>',       {desc='Save the buffer', silent
 
 --buffer navigation
 vim.keymap.set('n', '<c-PageUp>',   ':bNext<CR>', {desc='Previous buffer', silent=true})
-vim.keymap.set('n', '[b',           ':bNext<CR>', {desc='Previous buffer', silent=true}) 
+vim.keymap.set('n', '[b',           ':bNext<CR>', {desc='Previous buffer', silent=true})
 vim.keymap.set('n', '<c-PageDown>', ':bnext<CR>', {desc='Next buffer', silent=true})
 vim.keymap.set('n', ']b',           ':bnext<CR>', {desc='Next buffer', silent=true})
 vim.keymap.set('n', '<leader>nb',   ':enew<CR>',  {desc='New buffer', silent=true})
