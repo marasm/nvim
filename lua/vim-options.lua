@@ -62,6 +62,10 @@ vim.keymap.set('t', '<c-j>', [[<Cmd>wincmd j<CR>]], {desc='Term move to pane bel
 vim.keymap.set('t', '<c-h>', [[<Cmd>wincmd h<CR>]], {desc='Term move to pane to the left', silent=true})
 vim.keymap.set('t', '<c-l>', [[<Cmd>wincmd l<CR>]], {desc='Term move to pane to the right', silent=true})
 
+-- split window
+vim.keymap.set('n', '<leader>sv', ':vsplit<CR>', {desc='Split window vertically', silent=true})
+vim.keymap.set('n', '<leader>sh', ':split<CR>',  {desc='Split window horizontally', silent=true})
+
 -- resizing horizontal and vertical splits
 vim.keymap.set('n', '<A-k>', ':resize +1<CR>', {desc='Make horizontal window bigger', silent=true})
 vim.keymap.set('n', '<A-j>', ':resize -1<CR>', {desc='Make horizontal window smaller', silent=true})
