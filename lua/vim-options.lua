@@ -26,6 +26,9 @@ vim.opt.scrolloff = 8
 --enable incremantal search highlighting
 vim.opt.incsearch = true
 
+--ignore case while searching
+vim.opt.ignorecase = true
+
 -- disable the showing of mode in the messages area since we use lualine that shows it better
 vim.opt.showmode = false
 
