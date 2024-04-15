@@ -32,6 +32,9 @@ vim.opt.ignorecase = true
 -- disable the showing of mode in the messages area since we use lualine that shows it better
 vim.opt.showmode = false
 
+-- use system clipboard as default register
+vim.opt.clipboard = "unnamed"
+
 --word wrap options
 vim.keymap.set('n', '<leader>ww', ':set wrap<CR>', {desc='Word wrap on', silent=true})
 vim.keymap.set('n', '<leader>nw', ':set nowrap<CR>', {desc='Word wrap off', silent=true})
