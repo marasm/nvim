@@ -26,8 +26,14 @@ vim.opt.scrolloff = 8
 --enable incremantal search highlighting
 vim.opt.incsearch = true
 
+--ignore case while searching
+vim.opt.ignorecase = true
+
 -- disable the showing of mode in the messages area since we use lualine that shows it better
 vim.opt.showmode = false
+
+-- use system clipboard as default register
+vim.opt.clipboard = "unnamed"
 
 --word wrap options
 vim.keymap.set('n', '<leader>ww', ':set wrap<CR>', {desc='Word wrap on', silent=true})
