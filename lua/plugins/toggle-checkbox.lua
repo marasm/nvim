@@ -3,7 +3,7 @@ return {
   config = function()
     require("toggle-checkbox").setup({
       --can override characters for states
-      --checked_char = "√",
+      checked_char = "✓",
       --unchecked_char = " ",
       --failed_char = "x",
       --partial_char = "~",
