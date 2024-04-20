@@ -33,7 +33,7 @@ vim.opt.ignorecase = true
 vim.opt.showmode = false
 
 -- use system clipboard as default register
-vim.opt.clipboard = "unnamed"
+vim.opt.clipboard = "unnamed,unnamedplus"
 
 --word wrap options
 vim.keymap.set('n', '<leader>ww', ':set wrap<CR>', {desc='Word wrap on', silent=true})
