@@ -12,6 +12,7 @@ return {
 					"javascript",
 					"vim",
 					"lua",
+          "go",
 					"yaml",
 					"java",
 					"json",

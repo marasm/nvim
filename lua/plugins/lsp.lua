@@ -35,6 +35,9 @@ return {
       lspconfig.yamlls.setup({
         capabilities = capabilities
       })
+      lspconfig.gopls.setup({
+        capabilities = capabilities
+      })
 
       vim.diagnostic.config({
         virtual_text = false,  --disable inline error messages
