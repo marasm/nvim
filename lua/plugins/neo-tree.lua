@@ -7,7 +7,7 @@ return {
 		"MunifTanjim/nui.nvim",
 	},
 	config = function()
-		vim.keymap.set("n", "<leader>fb", ":Neotree filesystem reveal left<CR>", {desc="Show file browser", silent=true})
+		vim.keymap.set("n", "<leader>fb", ":Neotree toggle<CR>", {desc="Toggle file browser", silent=true})
 		vim.keymap.set("n", "<leader>ob", ":Neotree buffers reveal float<CR>", {desc="Show open buffers", silent=true})
 
     require("neo-tree").setup({

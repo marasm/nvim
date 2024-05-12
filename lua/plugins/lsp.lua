@@ -40,7 +40,7 @@ return {
       })
 
       vim.diagnostic.config({
-        virtual_text = false,  --disable inline error messages
+        virtual_text = true,  --disable inline error messages
         signs = false,         --disable gutter signs (W | E)
       })
       vim.keymap.set("n", "K", vim.lsp.buf.hover,                {desc='Hover info'})
