@@ -7,7 +7,7 @@ return {
 		"MunifTanjim/nui.nvim",
 	},
 	config = function()
-		vim.keymap.set("n", "<leader>fb", ":Neotree filesystem reveal left<CR>", {desc="Show file browser", silent=true})
+		vim.keymap.set("n", "<leader>fb", ":Neotree toggle<CR>", {desc="Show file browser", silent=true})
 		vim.keymap.set("n", "<leader>ob", ":Neotree buffers reveal float<CR>", {desc="Show open buffers", silent=true})
 
     require("neo-tree").setup({
@@ -27,7 +27,7 @@ return {
           --               -- the current file is changed while the tree is open.
           leave_dirs_open = false, -- `false` closes auto expanded dirs, such as with `:Neotree reveal`
         },
-        hijack_netrw_behavior = "open_default" 
+        hijack_netrw_behavior = "open_default"
       }
     })
 	end,
